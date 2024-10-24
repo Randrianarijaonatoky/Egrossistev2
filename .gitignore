@@ -1,0 +1,27 @@
+# Ignorer les dépendances et fichiers générés
+/vendor
+/node_modules
+
+# Fichiers de configuration sensibles
+.env
+
+# Fichiers de log
+/storage/logs/*.log
+
+# Fichiers de cache
+/storage/framework/cache/data/*
+/bootstrap/cache/*.php
+
+# Fichiers de débogage
+npm-debug.log
+yarn-error.log
+
+# Fichiers publics générés
+/public/storage
+/public/*.map
+/public/mix-manifest.json
+
+# Fichiers d'éditeur
+.vscode/
+.idea/
+Commande ECHO activ‚e.
