@@ -1,0 +1,286 @@
+@keyframes nav{
+    0%{
+        transform: translateX(-100%);
+        // width: 0;
+    }100%{
+        transform: translateX(0);
+        transform: rotateX('60deg');
+        // width: 100%;
+    }
+}
+
+@keyframes rotateItem {
+
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+//logo nav
+@keyframes rotatePhone{
+    0%{
+        transform:translate(1.3rem, 5px) rotate(331deg);
+    }
+    100%{
+        transform: translate(1.3rem, 5px) rotate(348deg);
+    }
+
+}
+
+@keyframes gift{
+    0% {
+        // transform: scale(1.1);
+        // transform: scale3d(2.5, 1.5, 1.5);
+        opacity: 0;
+
+    }
+    50%{
+        transform: scale3d(2, 1.5, -1.5) ;
+        color: red;
+
+
+    }
+    60%{
+        // transform: scale3d(2, 1.1, .5);
+        opacity: 1;
+        color: $blanc;
+
+    }
+
+    100%{
+        color: $noir;
+        opacity: 0.2;
+        transform: scale(.8);
+
+        // transform: scale(1.3);
+    }
+}
+
+@keyframes rotateLogo {
+    0%{
+        transform: rotate(0deg) ;
+        opacity: .3;
+    }
+    50%{
+        // transform: scale3d(2, 1.5, .5);
+        transform: scale(1.2);
+
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(360deg) ;
+    }
+}
+
+@keyframes imagePromotion {
+    0%{
+        opacity: .5;
+    }
+    50%{
+        // height: 100px;
+        opacity: 1;
+
+    }
+    100%{
+        // height: 200px;
+    }
+}
+
+//Page Produit
+@keyframes Star {
+    0%{
+        opacity: .4;
+        bottom: 6rem;
+        left: 2rem;
+
+    }
+    50%,60%{
+        bottom: 40%;
+        left: 10%;
+
+        opacity: 0.3;
+        transition: 5s;
+        // transform: translateY(-140%) translateX(40%);
+
+    }
+    80%, 85%{
+        transform: scale(.6);
+        bottom: 60%;
+        left: 30%;
+        opacity: .1;
+
+
+        // transform: translateY(60%) translateX(80%) scale(1.1);
+    }
+    90%, 95%{
+        left: 60% ;
+        bottom: 30%;
+        opacity: .1;
+    }
+    100%{
+
+        opacity: .6;
+        bottom: 10%;
+        left: 45%;
+        filter: blur(2px);
+        transform: scale(.9);
+    }
+}
+@keyframes opacityLogo {
+    0%{
+        opacity: .4;
+        transform: scale(1);
+    }
+    50%,60%{
+        opacity: 0.5;
+
+
+
+    }
+    100%{
+        transform: scale(.8);
+        opacity: .6;
+        filter: blur(2px);
+    }
+}
+@keyframes opacitySocolait {
+    0%{
+        opacity: .4;
+        transform: rotate(330deg);
+    }
+    50%,60%{
+        opacity: 0.5;
+        transform: rotate(336deg);
+
+    }
+    100%{
+        opacity: .6;
+        transform: rotate(346deg);
+    }
+}
+
+
+
+//header
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideAndScale {
+    0% {
+        transform: translateX(100%) scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes opacityCadeau {
+    0%{
+        transform: translateY(2rem) ;
+
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(-2rem) scale3d(2, 1.1, 1);
+
+    }
+    100%{
+        opacity: .5;
+    }
+}
+
+@keyframes iconCart {
+    0%{
+        transform: translateY(2px);
+
+    }
+    100%{
+        transform: scale3d(1.1, 1.1, 1);
+
+    }
+}
+
+// }
+
+@keyframes translateTop {
+    0%, 100%{
+
+        opacity: .5;
+        transform: translateY(-5px);
+    }
+
+
+}
+
+@keyframes slide-up {
+    from {
+        bottom: -50px; /* Position initiale */
+
+    }
+    to {
+        bottom: 0; /* Position finale à l'intérieur du conteneur */
+    }
+}
+
+@keyframes circle {
+    0% {
+        left: 8%;
+        bottom: 20%
+    }
+    50%{
+        bottom: 10%;
+        left: 5%;
+        font-size: 2rem;
+    }
+
+    80%{
+        bottom: -5%;
+        left: 9%;
+
+    }
+    100%{
+        bottom: 10%;
+        left: 15%;
+        font-size: 2rem;
+    }
+}
+
+@keyframes shopping {
+    0%{
+        transform: scale3d(1.2, 1, 1.5);
+    }
+    100%{
+        transform: scale3d(1.5, 1, 1.2);
+    }
+}
+
+
+

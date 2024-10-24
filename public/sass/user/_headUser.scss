@@ -1,0 +1,109 @@
+.headUser{
+    background-color: $blanc;
+    // border-radius: 15px;
+    padding: 1rem;
+    color: $noir;
+    box-shadow: 0px 0px 20px 0px #0000004b;
+    // border-right: 1px solid $grise;
+    z-index: 5;
+
+    &-figure{
+        // // width: 200px;
+        // margin: 0 auto;
+        text-align: center;
+
+        &-image{
+            object-fit: cover;
+            width: 150px ;
+            margin: auto;
+            height: 150px;
+            border-radius: 50%;
+
+            border: 3px solid $jaune;
+            padding: 5px;
+        }
+
+        &-pseudo{
+            font-weight: 500;
+
+            &-check{
+                font-size: 1rem;
+                color: $jaune;
+            }
+        }
+    }
+
+    &-listes{
+
+
+        &-liste{
+            width: 100%;
+            color: $noir;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-top: 1rem;
+
+
+            &-icon{
+                font-size: 1.5rem;
+                transform: scale(.8);
+            }
+
+            &-para{
+                font-weight: 400;
+            }
+        }
+
+        &-liste:hover &-liste-icon{
+            color: $jaune;
+            transform: scale(1);
+            transition: .4s;
+        }
+        &-liste:hover &-liste-para{
+            font-weight: 500;
+        }
+    }
+}
+
+.navUser{
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    color: $jaune;
+    background-color: $jaune;
+    // margin: 1rem 0;
+    // border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    &-title{
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $noir;
+    }
+
+    &-icons{
+        display: flex;
+        gap: 1rem;
+
+        &-notifs{
+            position: relative;
+
+            &-dot{
+                background-color: $rouge;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                position: absolute;
+                border: 2px solid $jaune;
+                top: 3px;
+                right: 5px;
+            }
+        }
+    }
+
+}

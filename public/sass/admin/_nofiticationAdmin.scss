@@ -1,0 +1,91 @@
+.notificationAdmin{
+    // flex: 5;
+    height: 100vh;
+    overflow: overlay;
+    padding: 2rem;
+    // border: 5px solid $jaune;
+
+    &-cards{
+        padding: .5rem;
+        width: 80%;
+        margin: auto;
+        // display: flex;x
+        // gap: 1rem;
+        // flex-wrap: wrap;
+
+        background-color: $blanc;
+        &-card{
+            border-radius: 15px;
+            overflow: hidden;
+            padding: 1rem;
+            flex-grow: 1;
+
+
+            &-head{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &-title{
+                background-color: $jaune;
+                padding: .5rem;
+                font-size: 1.5rem;
+            }
+
+            &-textes{
+                margin: 1rem;
+
+                &-title{
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+
+                &-btns{
+                    display: flex;
+                    float: right;
+                    gap: 1rem;
+
+                    &-confirm{
+                        border: none;
+                        padding: .5rem;
+                        border-radius: 15px;
+                        background-color: $jaune;
+                        color: $blanc;
+
+                    }
+
+                    &-confirm:hover{
+                        // border: 2px solid $jauneClaire;
+                        transform: translateY(-2px);
+                        transition: .5s;
+                        opacity: .8;
+                    }
+                    &-annuler{
+                        border: none;
+                        padding: .5rem;
+                        border-radius: 15px;
+                        // background-color: $jaune;
+                        color: $noir;
+                    }
+
+                    &-annuler:hover{
+                        background-color: $grise;
+                        opacity: .5;
+                        color: $blanc;
+                        transition: .5s;
+
+                    }
+
+
+
+
+                }
+            }
+
+        }
+
+    }
+
+
+}

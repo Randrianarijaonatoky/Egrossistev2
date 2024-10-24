@@ -1,0 +1,222 @@
+.userCompte{
+    flex: 5;
+    padding: 2rem;
+
+    &-compte{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1rem 0;
+
+        &-card{
+            background-color: $blanc;
+            border-radius: 15px;
+            padding: 1rem;
+            padding-bottom: 3.5rem !important;
+            // flex: 1;
+            flex-grow: 1;
+            width: 290px;
+            // height: 140px;
+            overflow: hidden;
+            position: relative;
+
+
+            &-icon{
+                color: $jaune;
+                font-size: 2.4rem;
+                margin-bottom: 1rem;
+                // animation: shopping 2s infinite alternate;
+            }
+
+            &-value{
+                position: absolute;
+                // bottom: -100%; /* Commence en dehors du conteneur, en bas */
+                font-size: 2em;
+                margin-top: .5rem;
+                animation: moveUp 1.5s alternate; /* Durée de l'animation et répétition */
+                font-weight: 500;
+
+            }
+
+
+        }
+
+        &-card:hover{
+            // background-color: $jaune;
+        }
+        &-card:hover &-card-icon{
+            // color: $blanc;
+            transition: .5s;
+        }
+    }
+
+    &-contenair{
+        display: flex;
+        gap: 1rem;
+
+    }
+    &-achat{
+        border-radius: 15px;
+        background-color: $blanc;
+        flex: 8;
+        padding: .5rem;
+
+
+        &-title{
+            background-color: $jaune;
+            border-radius: 15px  !important;
+            padding: .5rem !important;
+            margin-bottom: .5rem;
+
+            &-text{
+                margin: 1rem;
+                border-start-end-radius: 15px;
+                border-start-start-radius: 15px;
+                padding: 1rem;
+            }
+        }
+
+
+        &-img{
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        &-btnAnuller{
+            color: $rouge;
+            background: none;
+            border: none;
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        &-btnAnuller:hover{
+            opacity: .8;
+            // color: $noir;
+        }
+    }
+
+    &-achat{
+
+        border-radius: 15px;
+        background-color: $blanc;
+        overflow: hidden;
+        width: 100%;
+        // margin: 1rem;
+        flex: 8;
+
+        &-head{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            // margin-top: .5rem;
+            margin: 0 1rem;
+            text-align: left;
+        }
+
+        &-cards{
+            margin: 0 1rem;
+            // height: 35vh;
+            // overflow: ;
+        }
+
+        &-contenair{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            width: 100%;
+
+            &-img{
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+
+
+        }
+
+        &-timeAgo{
+            font-weight: 400;
+            font-size: .8rem;
+        }
+    }
+
+    &-paiement{
+        border-radius: 15px;
+        background-color: $blanc;
+        overflow: hidden;
+        flex: 2;
+        // padding: .5rem;
+        // box-shadow: inset -1px 1px 20px 1px #adb0b2;
+        // border: 1px solid #96999a83;
+
+        &-title{
+            background-color: $jaune;
+            // border-radius: 15px;
+            padding: .5rem;
+            font-size: 1.3rem;
+            border-start-end-radius: 15px;
+            border-start-start-radius: 15px;
+        }
+
+        &-cards{
+            // padding: 1rem;
+            // margin: 1rem;
+            overflow: overlay;
+            height: 35vh;
+            margin: .5rem;
+            position: relative;
+            &-card{
+                // margin-top: 1.5rem;
+                cursor: pointer;
+                &-prix{
+                    color: $vert;
+                }
+
+            }
+
+            &-card:hover {
+                // background-color: $jauneClaire
+                // transform: scale(1.1);
+                transition: .5s;
+            }
+
+            &-none{
+                text-align: center;
+                color: $grise;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%,-40%);
+                opacity: .8;
+            }
+
+        }
+
+    }
+}
+
+thead{
+    margin-bottom: 1rem;
+}
+
+td{
+    text-align: left;
+
+}
+
+@keyframes moveUp {
+    0% {
+        bottom: -100%; /* Commence en dehors du conteneur */
+        opacity: .5;
+    }
+    100% {
+        bottom: .5rem; /* Fin en dehors du conteneur, en haut */
+        opacity: .8;
+    }
+}

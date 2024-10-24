@@ -1,0 +1,477 @@
+.header{
+    // position: relative;
+
+
+    &-nav{
+        position: absolute;
+        z-index: 9999999;
+        cursor: pointer;
+        // margin: 1rem 0;
+        width: 100%;
+        padding: 1rem 4rem;
+        display: flex;
+        align-items: center;
+        // margin: 1rem 5rem ;
+        justify-content: space-between;
+        background: linear-gradient(180deg, #00000091, #00000000);
+
+        &-logos{
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+        }
+
+        &-logo{
+            // width: 7%;
+            // aspect-ratio: 6/4;
+            width: 3.5rem;
+        }
+
+        &-iconMenu{
+            display: none;
+
+            &-xmark{
+                text-align: end !important;
+                float: right !important;
+                margin-left: 13rem;
+                font-size: 2rem;
+            }
+        }
+
+        &-iconsContenair{
+            display: flex;
+            gap: 1rem;
+
+            &-profils{
+                display: flex;
+                gap: .5rem;
+                align-items: center;
+
+
+                &-profile{
+                    height: 2rem;
+                    width: 2rem;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: 1px solid $jaune;
+
+                    &-pdp{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                }
+
+                &-pseudo{
+                    color: $blanc;
+                }
+            }
+            &-hr{
+                width: 0;
+                border-right: 1px solid #e3e6f0;
+                height: calc(4.375rem - 2rem);
+                margin: auto 1rem;
+            }
+        }
+
+        &-titre{
+            color: $blanc;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: 550;
+        }
+
+
+        &-listes{
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+
+
+            &-liste{
+
+                color: $blanc;
+                font-weight: 400;
+                font-size: 1.5rem;
+                padding: 0.5rem 1rem;
+                // border-radius: 15px;
+                animation: rotate 1s alternate infinite;
+
+                position: relative; /* Permet à l'élément pseudo d'être positionné relativement à cet élément */
+                display: inline-block; /* Pour ajuster la taille du conteneur à son contenu */
+
+                overflow: hidden; /* Cache le pseudo-élément jusqu'à l'animation */
+
+
+
+            }
+
+
+            &-liste::after {
+                content: ''; /* Crée un pseudo-élément sans texte */
+                position: absolute; /* Permet de le positionner par rapport à l'élément parent */
+                left: 0;
+                bottom: -100%; /* Positionne l'élément en dessous du texte */
+                width: 100%;
+                height: 100%;
+                border-radius: 15px;
+                background-color: $jaune; /* Couleur de l'arrière-plan lors du hover */
+                transition: bottom 0.5s; /* Définit la transition de l'effet de bas en haut */
+                z-index: -1; /* Place l'arrière-plan derrière le texte */
+
+            }
+
+            &-liste:hover{
+                // color: $jaune;
+                transition: 0.5s;
+                // text-decoration: underline!important;
+                // background-color: $jaune;
+                // border-radius: 27% 35% 23% 26% / 48% 0% 45% 0% ;
+                // border-radius: 25px 8px 25px 8px;
+                // margin-bottom: 1rem;
+                transform: translateY(-5px);
+                // padding: 0.5rem 1rem;
+                // border-radius: 15px;
+            }
+
+            &-liste:hover::after {
+                bottom: 0; /* Fait monter l'arrière-plan jusqu'à recouvrir le texte */
+            }
+
+            &-liste:hover &-liste-line{
+                color: $jaune !important;
+                border: 5px solid $jaune;
+                // margin-top: 1rem;
+                transition: 0.5;
+                animation: nav alternate;
+            }
+            @mixin hoverNav{
+                color:$blanc
+            }
+        }
+
+        &-icons{
+            position: relative;
+            // animation: cartAnim 1s alternate infinite;
+            &-icon{
+                font-size: 1.5rem;
+                color: $jauneClaire;
+                padding: 0.5rem;
+                // background-color: $blanc;
+                // border-radius: 50%;
+                opacity: 0.8;
+
+            }
+
+
+
+            &-icon:hover{
+                transition: 0.5s;
+                // @include hoverNav;
+                // color: $blanc;
+                opacity: 1;
+            }
+
+            &-num{
+                position: absolute;
+                text-align: center;
+                /* width: 20px; */
+                background-color: rgb(253, 74, 74);
+                color: #f8f9fc;
+                padding: 3px 7px 5px 10px;
+                right: -33%;
+                font-size: 13px;
+                top: -7%;
+                border-bottom-right-radius: 50%;
+                border-top-left-radius: 50%;
+                border-top-right-radius: 50%;
+            }
+
+            &-total{
+                position: absolute;
+                // bottom: 19%;
+                left: 71%;
+                /* width: 0px; */
+                transform: translateY(-30%);
+                font-size: 10px;
+                background-color: rgb(253, 74, 74);
+                color: #f8f9fc;
+                border-bottom-right-radius: 50%;
+                border-bottom-left-radius: 50%;
+                padding: 5px 11px;
+                border-top-right-radius: 50%;
+                font-weight: 600 ;
+            }
+        }
+
+    }
+
+    &-hoverProfil{
+        display: none;
+        position: absolute;
+        top: 6rem;
+        right: 8rem;
+        // background-color: #e8e4e453;
+        // backdrop-filter: blur(5px);
+        background-color: #0000005d;
+        border-radius: 15px;
+        z-index: 999999999;
+        // padding: .5rem;
+        width: 200px;
+        text-align: center;
+
+        &-link{
+            color: $blanc;
+            text-align: center;
+            display: block;
+            width: 100%;
+            padding: .5rem;
+            border-radius: 15px;
+            font-weight: 600;
+            // margin: 1rem;
+        }
+
+        &-link:hover{
+            background-color: $jaune;
+        }
+    }
+
+    &-image{
+        position: relative;
+
+        // height: 100vh;
+        &-textes{
+            position: absolute;
+            text-align: center;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 100;
+            color: $blanc;
+            font-size: 1rem;
+
+            &-logo{
+                position: relative;
+                margin-bottom: 1rem;
+                &-carts{
+                    width: 22%;
+                    margin: auto;
+                    display: flex;
+                    // font-size: 2rem;
+                    text-align: center;
+                    &-square{
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        background-color: $jaune;
+                        // transform: translateX(-100%);
+                        // animation: rotateLogo 2s  infinite linear;
+
+                    }
+
+                    &-phone{
+                        z-index: 33;
+                        font-size: 3rem;
+                        // transform: rotate(325deg) translateX(2rem) translateY(10px);
+                        // transform: translate(2rem , 10px);
+                        transform: translate(1.3rem, 5px) rotate(346deg);
+                        // animation: rotatePhone 1.5s infinite alternate;
+
+                    }
+                    &-phoneLogo{
+                        width: 65%;
+                        margin: auto;
+                    }
+                }
+
+                &-icons{
+                    // position: absolute;
+                    // top: 1rem;
+                    // left: 50%;
+
+                    // transform: translate(1.3rem, 5px) rotate(346deg);
+                    // transform: translate(1.3rem, 5px) rotate(346deg);
+                    &-icon{
+                        // color: red;
+                        // animation: gift 2s  infinite;
+                        animation: gift 3s   backwards ;
+                        opacity: 0;
+                        position: absolute;
+                        top: 16%;
+                        left: 46%;
+                        z-index: 36;
+                        transform: rotate(338deg);
+
+                    }
+
+
+                    &-icon:nth-child(1){
+                        animation-delay: 13s;
+
+                    }
+                    &-icon:nth-child(2){
+                        animation-delay: 3s;
+
+                    }
+                    &-icon:nth-child(3){
+                        animation-delay: 5s;
+
+                    }
+                    // &-icon:nth-child(4){
+                    //     animation-delay: .1s;
+                    // }
+                    // &-icon:nth-child(5){
+                    //     animation-delay: 1.4s;
+                    // }
+                    // &-icon:nth-child(6){
+                    //     animation-delay: 2s;
+                    // }
+
+                }
+
+
+                &-name{
+                    font-weight: 600;
+                }
+
+
+                &-txt{
+                    text-transform: uppercase;
+                    color: $jaune;
+                }
+            }
+
+            &-para{
+                font-size: 3rem;
+                margin-bottom: 1.3rem;
+                animation: slideInFromLeft 1.5s forwards;
+                opacity: 0;
+                &-txt{
+                    color: $jaune;
+                    transform-origin: 50% 100%;
+                    display: inline-block;
+                    line-height: 1em;
+                }
+
+            }
+
+            // &-para::first-line{
+            //     color: $noir;
+            // }
+
+            &-btn{
+                color: $blanc;
+                background-color: $jaune;
+                padding: 1rem 1.5rem;
+                margin-top: 1rem;
+                border-radius: 15px;
+                font-size: 1.5rem;
+                box-shadow: inset 0px 1px 6px 9px #d69b06bf;
+                transform: translateX(100%) scale(0.5);
+
+                opacity: 0;
+                    animation: slideAndScale 1s forwards;
+
+
+            }
+
+            &-btn:hover{
+                box-shadow: inset 0px 1px 5px 7px rgb(70 67 67 / 19%);
+                color: $jaune;
+                background-color: $blanc;
+                transition: .9s;
+            }
+
+
+        }
+
+        &-img{
+            width: 100%;
+            aspect-ratio: 8/4;
+            transition: 2s;
+            filter: brightness(0.5);
+            object-fit: cover;
+            height: 100%;
+
+        }
+    }
+
+    &-slider{
+        position: relative;
+
+        &-image{
+            width: 100%;
+            aspect-ratio: 8/4;
+            transition: 2s;
+            filter: brightness(0.5);
+            object-fit: cover;
+            height: 100%;
+        }
+
+        &-textes{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            background: none;
+            color: $blanc;
+        }
+
+
+    }
+}
+
+.activeNav{
+    background-color: $jaune;
+}
+
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .cartAnim {
+    animation: cartAnim 1.5s alternate ease-in-out ;
+  }
+
+@keyframes cartAnim {
+    0% {
+        // transform: scale(1.1);
+        // transform: scale3d(2.5, 1.5, 1.5);
+        // color: red;
+    }
+    50%{
+        transform: scale3d(2, 1.2, .5);
+
+    }
+
+    100%{
+        // transform: scale(1.3);
+    }
+}
+
+.confettieNav{
+    width: 40%;
+}
+
+.cadeau{
+    width: 2rem;
+}
+
+.coin{
+    width: 3.5rem;
+    transform: rotateX('180deg');
+    // transform: rotate(180deg);
+}
+
+
+

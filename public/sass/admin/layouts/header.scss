@@ -1,0 +1,134 @@
+.Dashboard-nav{
+    background-color: $blanc;
+    // width: 20%;
+    flex: 1;
+    // display: grid;
+    // grid-template-columns: 1fr;
+    padding: 1rem;
+    overflow: hidden;
+    height: 100vh;
+
+    &-listes{
+        color: $noir!important;
+
+        &-liste{
+            // align-items: center;
+
+        }
+        &-contenair{
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+
+
+            color: $noir!important;
+
+            &-content{
+                display: flex ;
+                gap: 1rem;
+            }
+
+            &-liste{
+                color: $noir!important;
+                width: 100%;
+
+                // margin: 2rem 0;
+
+            }
+
+            // &-liste:hover{
+            //     background-color: $jaune;
+            // }
+
+            &-icon{
+                // margin-right: 1rem;
+                font-size: 1.3rem;
+            }
+
+            &-arrow{
+                font-size: 1.3rem;
+                text-align: end;
+            }
+            // &-liste:hover{
+            //     background-color: $jaune;
+            //     transition: 0.5s;
+
+            // }
+        }
+        &-contenair:hover{
+            background-color: $jaune;
+            transition: 0.5s;
+
+        }
+
+
+        &-contenair:hover &-contenair-liste{
+            color: $noir!important;
+        }
+        &-contenair:hover &-contenair-icon{
+            color: $noir!important;
+        }
+
+
+        &-figure{
+            width: 150px;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+
+            &-pseudo{
+                margin: 1rem 0;
+                font-size: 1rem;
+                font-weight: 600;
+            }
+
+            &-btn{
+                color: $blanc;
+                background-color: $gris;
+                border: 2px solid $noir;
+                padding: 5px;
+                margin-bottom: 2rem;
+                border-radius: 5px;
+
+
+            }
+
+            &-btn:hover{
+                color: $jaune;
+                background-color: $noir;
+            }
+
+        }
+
+        &-img{
+            height: 150px;
+            border-radius: 50%;
+            padding: 5px;
+            border: 5px solid $jaune;
+            width: 100%;
+
+        }
+
+        &-content{
+
+
+        }
+    }
+}
+
+.produitsNav{
+    // transition: 2s;
+    background-color: $bgWhite;
+    height: 0;
+}
+.gestionNav{
+    // transition: 2s;
+    background-color: $bgWhite;
+}
+.commande{
+    background-color: #bfbfbb;
+    // height: 0;
+}

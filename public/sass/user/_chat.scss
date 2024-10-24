@@ -1,0 +1,52 @@
+.chat{
+    width: 60%;
+    margin: auto;
+
+    &-cards{
+        background-color: $blanc;
+        border-radius: 15px;
+        padding: 1rem;
+        height: 80vh;
+
+        &-card{
+            background-color: $jaune;
+            color: $blanc;
+            padding: .5rem;
+            border-radius: 15px;
+
+        }
+
+        &-send{
+            display: flex;
+            padding: .5rem;
+            align-items: center;
+            width: 100%;
+            gap: 1rem;
+            &-img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+                // flex: 1;
+            }
+
+            &-textarea{
+                height: 50px;
+                flex: 3;
+                border: 2px solid $black;
+                border-radius: 15px;
+                padding-left: 1rem;
+            }
+            &-btn{
+                flex: 2;
+                background-color: $jaune;
+                height: 50px;
+                border: none;
+                border-radius: 15px;
+                color: $blanc;
+            }
+
+
+        }
+    }
+}

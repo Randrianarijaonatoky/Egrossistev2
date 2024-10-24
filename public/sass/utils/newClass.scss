@@ -1,0 +1,46 @@
+.section.visible {
+    opacity: 1;
+}
+.section.animateSecion {
+    // transform: translateY(0);
+    opacity: 1;
+    transform: scale(1);
+    transition: 1s;
+}
+.section {
+    // transform: translateY(50px); /* Animation initiale */
+    opacity: 0.1;
+    transform: scale(.8);
+}
+
+.slideUp{
+    // animation: slide-up 1s  alternate;
+    // bottom: -50px;
+    transform:  scale(1);
+    opacity: 1;
+    transition: 1s;
+    top: 0;
+
+
+}
+
+.promotionRotate{
+    // aspect-ratio: 5 / 7;
+    // height: auto;
+
+    opacity: 1;
+    transition:  1.5s;
+    object-fit: cover;
+    // transform: scale(1);
+}
+
+.StockBas{
+    color: $rouge;
+}
+
+.hideMessage{
+    opacity: 0;
+    transform: translateX(-100%); /* Glissement vers le haut de 20 pixels */
+    transition: 2s;
+
+}

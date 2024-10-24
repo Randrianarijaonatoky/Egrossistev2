@@ -1,0 +1,38 @@
+.prixProm{
+    text-decoration: line-through red;
+}
+
+.scroll-slow {
+    transition: scroll-left 2s ease-out;
+}
+
+.scroll-fast {
+    transition: scroll-left 0.5s ease-out;
+}
+
+.checkIcon{
+    color: $blanc;
+
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: none;
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

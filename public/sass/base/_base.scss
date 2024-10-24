@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box!important;
+}
+
+body{
+    // background-color: rgb(234, 234, 234)!important;
+    // background-color: var(--color-fourth)!important;
+    // background-color: #2f2f2f!important;
+    // background-color: #feb600!important;
+    font-family: altone;
+    // background-color: #d5d7d7;
+
+
+
+    ::-webkit-scrollbar{
+        background-color: #2f2f2f ;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        background-color: #feb600;
+        width: 5px;
+        // height: 5rem;
+        border-radius: 50px;
+    }
+}
+
+
+@font-face {
+    font-family: ITCEDSCR;
+
+    src: url('../../font/ITCEDSCR.TTF');
+}
+
+html {
+    font-size: 100%;
+}
+
+li{
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none!important;
+
+}
+
+p{
+    margin-bottom: 0!important;
+}
+ul{
+    padding-left: 0!important;
+}
+
+
+
+
+$grise: #858796;
+$bleu-ciel:#36b9cc;
+$blanc:#f8f9fc;
+$rouge:rgb(253, 74, 74);
+$jaune: #feb600;
+$jauneClaire: #fffeef;
+$blue:#0965ef;
+$noir:#1f1f1f;
+$gris: #2f2f2f;
+$vert: #20c997;
+$black: #000304;
+$white: #fffeef;
+$bgWhite : #bfbfbb;
+
+@font-face {
+    font-family: altone;
+    // src: url(../../font/Altone-ExtraLight.ttf);
+}
+
+
+.input{
+    outline: none;
+    border: 4px solid $blanc;
+
+}
+
+.input:focus{
+    border: 4px solid $jaune;
+
+}
+

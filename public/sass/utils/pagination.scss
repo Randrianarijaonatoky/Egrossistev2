@@ -1,0 +1,21 @@
+.pagination{
+    display: flex;
+    gap: .2rem;
+    align-items: center;
+    // font-size: 2rem;
+    &-btn{
+        // background: red;
+        color: $blanc;
+        background: $jaune;
+        padding: .5rem;
+        font-size: 1.5rem;
+        height: 2.5rem;
+
+    }
+}
+
+.disabled{
+    opacity: .5;
+
+}
+

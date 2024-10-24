@@ -1,0 +1,84 @@
+.utilisateur{
+    flex: 5;
+    padding: 2rem;
+
+    &-title{
+        text-align: center;
+
+    }
+    &-cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+        gap: 1rem;
+
+
+        &-card{
+            background-color: $blanc;
+            // padding: 1rem;
+            border-radius: 5px;
+            height: 470px;
+            flex: 1;
+
+
+            &-bg{
+                height: 150px;
+                background-color: $jaune;
+                border-radius: 5px 5px 0 0;
+
+            }
+
+            &-figure{
+                width: 250px;
+                margin: auto;
+                transform: translateY(-8rem);
+                padding: .5rem;
+
+                &-img{
+                    width: 100%;
+                    border-radius: 50%;
+                    height: 250px;
+                    border: 5px solid $blanc;
+                    // padding: 5px;
+                }
+            }
+
+            &-textes{
+                background-color: $blanc;
+                text-align: center;
+                transform: translateY(-8rem);
+            }
+
+            &-action{
+
+                display: flex;
+                justify-content: space-between;
+                transform: translateY(-6rem);
+                align-items: center;
+                margin: 0 1rem;
+
+                &-id{
+                    background-color: $jaune;
+                    padding: 1rem    1.5rem ;
+                    font-size: 1rem;
+                }
+
+                &-btn{
+                    background: none;
+                    color: red;
+                    border: none;
+                    font-size: 1.5rem;
+
+                }
+            }
+
+        }
+
+        &-card:hover{
+            // transform: scale(1.1);
+            transform: translateY(-3px);
+            box-shadow: 6px 4px 17px 1px black;
+            transition: .8s;
+
+        }
+    }
+}

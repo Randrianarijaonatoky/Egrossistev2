@@ -1,0 +1,58 @@
+.facture{
+    margin: 2rem auto;
+    width: 60%;
+    border-radius: 10px;
+    // border: 5px solid $jaune;
+    border: 3px solid $jaune;
+    padding: 1rem;
+    font-weight: 500;
+
+    &-head{
+
+
+        &-logo{
+            width: 20%;
+        }
+
+        &-contenair{
+            display: flex;
+            text-align: end;
+            gap: 2rem;
+
+        }
+    }
+
+    &-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-contenair{
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            border: 2px solid $jaune;
+            padding: .5rem;
+            border-radius: 10px;
+        }
+    }
+
+    &-hr{
+        width: 0;
+        border-right: 1px solid $grise;
+        height: 4.375rem;
+        margin: auto 1rem;
+    }
+}
+
+
+table{
+    // width: 100%;
+    // border-collapse: collapse;
+    text-align: left;
+}
+
+th{
+    margin: 1rem;
+}
+

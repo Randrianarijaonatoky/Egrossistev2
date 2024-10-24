@@ -1,0 +1,239 @@
+.ajout{
+    flex: 5;
+    // margin: 2rem;
+    margin: 2rem;
+
+    &-title{
+        text-align: center;
+    }
+
+    &-contenair{
+        display: flex;
+        background-color: $blanc;
+        gap: 1rem;
+        padding: 2rem;
+        border-radius: 5px;
+        margin: 2rem 8rem;
+
+        &-content{
+            width: 35%;
+
+            &-figure{
+                overflow: hidden;
+                aspect-ratio: 1;
+
+            }
+
+        }
+
+        &-img{
+            width: 100%;
+            // width: 200px;
+            // height: 200px;
+            margin-bottom: 1rem;
+            // aspect-ratio: 2/6;
+
+        }
+
+        &-form{
+            flex: 4;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem;
+
+            &-contenair{
+                display: flex;
+                gap: 1rem;
+                width: 100%;
+                margin-bottom: .5rem;
+            }
+
+            &-content{
+                width: 100%;
+                // flex-grow: 300;
+
+                &-input{
+                    // background-color: $bgWhite;
+                    border: 4px solid $bgWhite;
+                    padding: 0.5rem;
+                    position: relative;
+                    overflow: hidden;
+                    padding-left: 3rem;
+                    border-radius: 5px;
+                    width: 100%;
+                }
+
+                &-icon{
+                    padding:1rem 0.5rem;
+                    background-color: $jaune;
+                    position: absolute;
+                    z-index: 23;
+                    display: none;
+                    border-radius: 5px 0 0 5px;
+                }
+
+
+
+                &-input:focus &-input-icon{
+                    background-color: $bgWhite;
+                }
+
+                &-btn{
+                    background-color: $jaune;
+                    color: $noir;
+                    padding: 0.5rem  1rem;
+                    border: none;
+                    border-radius: 15px;
+                    text-align: center;
+                }
+            }
+
+
+        }
+
+        &-ckeckbox{
+            margin-right: 1rem;
+
+
+        }
+    }
+}
+
+.checkBox{
+
+    &-contenair{
+
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        &-content{
+            display: flex;
+            align-items: center;
+            gap: .3rem;
+
+            // margin-right: 1rem;
+        }
+
+    }
+}
+
+.ajoutCategorie{
+    flex: 5;
+    // margin: 2rem;
+    margin: 2rem;
+
+    &-main{
+        display: flex;
+        gap: 1rem;
+    }
+
+    &-contenair{
+        background-color: $blanc;
+        // padding: 2rem;
+        border-radius: 15px;
+        margin: 2rem ;
+        overflow: hidden;
+
+        &-form{
+            margin: 1rem;
+        }
+    }
+
+    &-cards{
+
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        overflow: hidden;
+        max-height: 210px;
+        overflow-y: scroll;
+        padding: 1rem;
+    }
+
+    &-categories{
+        margin: 2rem ;
+        background-color: $blanc;
+        overflow: hidden;
+        border-radius: 15px;
+        flex: 2;
+
+        &-title{
+            background-color: $jaune;
+            padding: .5rem 1rem;
+            font-size: 1.5rem;
+
+        }
+
+        &-ctg{
+            display: flex;
+            justify-content: space-between;
+            padding: .5rem;
+            align-items: center;
+            // background-color: $jaune;
+            border: 2px solid $jaune;
+            border-radius: 5px;
+            // width: 130px;
+            flex: auto;
+            height: 50px;
+
+            &-delete{
+                background-color: red;
+                color: $blanc;
+                padding: .5rem;
+                border-radius: 5px;
+                border: none;
+                opacity: 1;
+            }
+            &-delete:hover{
+                background-color: red;
+                opacity: 0.5;
+                color: $blanc;
+                padding: .5rem;
+            }
+        }
+    }
+
+}
+
+.success{
+    // background-color: $;
+    color: $vert;
+    font-size: 1.5rem;
+    padding: .5rem;
+    width: 50%;
+    margin: 0 auto;
+    animation: success 1s alternate ;
+}
+.error{
+    font-size: 1.5rem;
+    padding: .5rem;
+    width: 50%;
+    margin: 0 auto;
+    // background-color: red;
+    color: $rouge;
+    animation: error 1s alternate infinite;
+    font-weight: 600;
+}
+
+@keyframes error {
+    0%{
+        transform: scale(1);
+        // color: green;
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+@keyframes success {
+    0%{
+        transform: scale(1);
+        // color: green;
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+

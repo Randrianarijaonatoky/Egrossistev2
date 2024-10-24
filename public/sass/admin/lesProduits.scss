@@ -1,0 +1,227 @@
+.lesProduits{
+    flex: 5;
+    padding: 2rem;
+
+    &-title{
+        text-align: center;
+
+    }
+
+    &-categories{
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        &-categorie{
+            border: 3px solid $noir;
+            background: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+        }
+
+        &-categorie:hover{
+            // background-color: $jaune;
+            border: 3px solid $jaune;
+            // color: $jaune;
+            border-radius: 5px;
+        }
+
+    }
+    &-cards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(385px,1fr));
+        gap: 1rem;
+        margin: 1rem 0;
+
+        &-card{
+            background-color: $blanc;
+            border-radius: 5px;
+            display: none;
+
+
+            &-contenair{
+                display: flex;
+                gap: .5rem;
+
+            }
+
+            position: relative;
+            &-img{
+                height: 100%;
+                width: 50%;
+                border-radius: 5px 0 0 5px;
+                aspect-ratio: 2.5 / 3;
+                // background-color: $jaune;
+                border: 1px solid $jaune;
+
+            }
+
+            &-desc{
+
+                // font-size: 1rem;
+
+                &-nom{
+
+                    font-size: large;
+
+                }
+
+                &-prom{
+                    text-decoration: line-through red;
+                }
+
+                &-valeur{
+                    color: $jaune;
+                    font-weight: 700;
+                }
+
+
+                &-icon{
+                    color: $rouge;
+                    font-size: 1.5rem;
+                    text-align: end;
+                    position: absolute;
+                    top: .5rem;
+                    right: .9rem;
+
+                }
+
+                &-links{
+                    display: flex;
+                    position: absolute;
+                    bottom: .5rem;
+                    gap: 2rem;
+                    justify-content: space-between;
+                }
+
+                &-btn{
+                    color: $noir;
+                    // text-align: center;
+                    padding: .5rem 1rem;
+                    // background-color: $jaune;
+                    border: 2px solid $jaune;
+                    // width: 200px;
+                    position: relative;
+                    // padding: 1rem 3rem;
+
+                    &-check{
+                        color: $blanc ;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        background-color: rgb(2, 144, 2) ;
+                        padding: 0.7rem .5rem;
+                        animation: animCheck 2s alternate;
+                    }
+
+                    &-plus{
+                        color: $blanc ;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        height: 100%;
+                        background-color: $grise ;
+                        padding: 0.7rem .5rem;
+
+                    }
+
+                    &-name{
+                        margin-left: 2rem;
+                    }
+                }
+
+                &-btn:hover{
+                    background-color: $jaune;
+                    color: $blanc!important;
+                    transition: .5s;
+                }
+
+            }
+
+        }
+    }
+
+    &-listes{
+        // border: 2px solid $jaune;
+        background-color: $blanc;
+        border-radius: 10px ;
+        overflow: hidden;
+        padding: .5rem;
+        width: 95%;
+        margin: 2rem;
+
+        &-nav{
+            display: flex;
+            justify-content: space-between;
+
+            &-recherche{
+                position: relative !important;
+                overflow: hidden;
+                &-input{
+                    // position: relative !important;
+                    overflow: hidden;
+                    background: none  !important;
+                    border: 1px solid $noir;
+                    border-radius: 10px;
+                    padding-left: .5rem;
+                }
+
+                &-input:focus{
+                    border: 1px solid $jaune;
+                    outline: none;
+
+                }
+
+                &-btn{
+                    border: none;
+                    background-color: $jaune;
+                    padding: 0 .5rem;
+                    position: absolute;
+                    right: 0;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+
+                    &-icon{
+                        color: $blanc;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+.active2{
+
+    background-color: $jaune;
+    border: 3px solid $jaune;
+    border-radius: 5px;
+
+}
+
+.show2{
+    display: block;
+}
+
+
+@keyframes animCheck {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100%{
+        transform: scale(1);
+        opacity: .8;
+    }
+
+}
+
+
+

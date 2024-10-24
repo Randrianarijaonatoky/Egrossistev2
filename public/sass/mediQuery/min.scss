@@ -1,0 +1,38 @@
+@media (min-width:1502px) {
+    .lesProduits{
+        &-cards{
+            &-card{
+                &-desc{
+                    &-btn{
+                        flex: 1;
+                    }
+                    &-links{
+                        // flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1705px ){
+    html{
+        font-size: 130%;
+    }
+
+    .produits{
+        &-cards{
+
+            &-card{
+                flex: 0 0 346px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1850px) {
+    .contenair{
+        max-width: 1597px;
+    }
+}
+

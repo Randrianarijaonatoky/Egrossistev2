@@ -1,0 +1,168 @@
+.fiche{
+    flex: 5;
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    font-weight: 500;
+
+    &-title{
+        text-align: center;
+    }
+
+    &-table{
+        background-color: $blanc;
+        // border: 3px solid $blanc;
+
+        &-titre{
+            background-color: $bleu-ciel!important;
+        }
+        &-titre1{
+            background-color: $rouge!important;
+        }
+
+        &-produits{
+            color: $jaune!important;
+            font-weight: 800;
+        }
+
+    }
+
+    &-titre{
+        border: 3px solid $gris;
+    }
+
+    &-value{
+        background-color: red!important ;
+    }
+
+    &-content{
+        height: 200px;
+        overflow: hidden;
+        font-weight: 500;
+
+        &-card{
+            display: none;
+        }
+
+        &-contenair{
+            /* Assure une largeur maximale pour l'image */
+            max-width: 100px; /* Ajuste cette valeur selon tes besoins */
+            text-align: center; /* Centre l'image dans la cellule */
+            &-image{
+                // width: 100%;
+                width: 100%; /* L'image prend toute la largeur de son conteneur */
+                height: auto; /* Conserve les proportions de l'image */
+                max-height: 100px; /* Assure que l'image ne dépasse pas cette hauteur */
+                object-fit: cover; /* Ajuste l'image pour qu'elle remplisse le conteneur sans déformation */
+            }
+        }
+
+        &-delete{
+            // background: $rouge !important;
+            position: relative; /* Nécessaire pour positionner l'élément de survol correctement */
+            transition: background-color 0.3s ease;
+
+            &-btn{
+                background: none;
+                border: none;
+                color: $rouge;
+                text-align: center;
+                width: 100%;
+
+            }
+
+            &-icon{
+                text-align: center;
+            }
+
+        }
+
+        &-modif{
+            position: relative;
+            transform: background-color .4s ease-out;
+
+            &-btn{
+
+                color: $noir;
+                background: none;
+                border: none;
+            }
+        }
+        &-prom{
+            position: relative;
+            transform: background-color .4s ease-out;
+            background-color: #ced4da;
+
+            &-btn{
+
+                color: #0d6efd;
+                background: none;
+                border: none;
+            }
+        }
+        &-chek{
+            position: relative;
+            transform: background-color .4s ease-out;
+
+            &-btn{
+
+                color: #20c997;
+                background: none;
+                border: none;
+            }
+
+            &-retire{
+                border: none;
+                background: none;
+                color: $vert;
+            }
+        }
+
+        &-chek:hover{
+            background-color: #20c997;
+        }
+        &-chek:hover &-chek-btn{
+            color: $blanc;
+        }
+        &-chek:hover &-chek-retire{
+            color: $blanc;
+        }
+        &-prom:hover{
+            background-color: #0d6efd;
+        }
+        &-prom:hover &-prom-btn{
+            color: $blanc;
+        }
+        &-modif:hover{
+            background-color: $jaune;
+        }
+        &-modif:hover &-modif-btn{
+            color: $blanc;
+        }
+
+
+        &-delete:hover{
+            background: $rouge;
+        }
+
+        &-delete:hover &-delete-btn{
+            color: $blanc;
+        }
+
+
+    }
+
+    &-montant{
+        // font-weight: 650;
+    }
+}
+
+// .table td, .table th {
+//     padding: 0; /* Retire le padding par défaut des cellules */
+//     margin: 0; /* Retire la marge par défaut des cellules */
+// }
+
+.table td, .table th {
+    vertical-align: middle; /* Assure que le contenu des cellules est centré verticalement */
+    height: auto; /* Permet aux cellules de s'ajuster automatiquement */
+}

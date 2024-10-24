@@ -1,0 +1,57 @@
+@import 'base/base';
+
+// layouts
+@import'layouts/header';
+@import'layouts/footer';
+
+//animation
+@import'animation/animation';
+
+//pages
+@import'pages/welcome';
+@import'pages/produits';
+@import'pages/connexion';
+@import'pages/chekout';
+// @import'pages/facture';
+@import'pages/facture';
+
+
+//user Dashboard
+@import'user/headUser';
+@import'user/achat';
+@import'user/facture';
+@import'user/userCompte';
+@import'user/userModif';
+@import'user/coupons';
+@import'user/chat';
+@import'user/notifUser';
+
+//mediaQUery
+@import'mediQuery/max';
+@import'mediQuery/min';
+
+
+
+
+//utils
+@import'utils/form';
+@import'utils/produit';
+@import'utils/newClass';
+@import'utils/pagination';
+
+
+
+
+//admin
+@import'admin/layouts/header';
+
+@import'admin/dashboard';
+@import'admin/fiche';
+@import'admin/ajout';
+@import'admin/lesProduits';
+@import'admin/utilisateur';
+@import'admin/mail';
+@import'admin/nofiticationAdmin';
+
+
+

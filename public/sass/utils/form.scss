@@ -1,0 +1,104 @@
+.input-form{
+    outline: none;
+    border: 3px solid $blanc;
+    padding: 1rem;
+    margin: .5rem 0;
+    padding-left: 2.5rem;
+    width: 100%;
+    border-radius: 10px;
+
+
+    // position: relative;
+}
+
+.checkout-form-container{
+    position: relative;
+}
+
+.input-form:focus{
+    border: 3px solid $jaune;
+}
+
+.input-icon
+{
+    border-radius: 10px 0 0 10px;
+    background-color: $jaune;
+    position: absolute;
+    z-index: 888;
+    left: 0;
+    top: 7px;
+    padding: 1.2rem .5rem;
+    height: 79%;
+    // animation: input 1s alternate;
+}
+
+@keyframes input {
+    0%{
+        transform: translateY(5rem);
+    }
+    50%{
+        // transform: scaleX(1.2);
+    }
+    60%{
+        // transform: scale(1);
+    }
+    100%{
+
+    }
+}
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #12b203; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    z-index: 5999999;
+    border-radius: 5px;
+    animation: welcome 1s alternate;
+    opacity: 1; /* Opacité initiale */
+    transition: opacity 1s ease-out; /* Durée de la transition */
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
+@keyframes welcome{
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    50%{
+        opacity: 0.6;
+        // transform: translateX(50%);
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+.BinevenueNone{
+    display: none !important;
+}
+
+.fade-out {
+    opacity: 0; /* Opacité réduite */
+}
